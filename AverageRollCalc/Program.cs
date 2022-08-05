@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,17 +8,7 @@ using System.Windows.Forms;
 
 namespace AverageRollCalc
 {
-    public class dice
-    {
-        public int sides = 20;
-        Random rnd = new Random();
-
-        public int Roll()
-        {
-            return rnd.Next(1, sides+1);
-        }
-
-    }
+    
 
     static class Program
     {
@@ -27,37 +18,42 @@ namespace AverageRollCalc
         [STAThread]
         static void Main()
         {
+            // Create firstime folder and files for programm
             string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\" + "averageRollCalc";
             System.IO.Directory.CreateDirectory(folderPath);
             if (!File.Exists(folderPath + "\\charList.txt")){File.Create(folderPath + "\\charList.txt").Dispose();}
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            // Check if a new version is available
+            string currentVersion = "1.0";
+            string pathToVersionFile = "https://github.com/RaphaelFrisano/AverageRollCalc/tree/main/AverageRollCalc/bin/Debug/currentVersion.txt";
+            bool versionDif = versionDifferent(currentVersion, pathToVersionFile);
 
-            /*
-            dice D4 = new dice();
-            D4.sides = 4;
-            dice D6 = new dice();
-            D6.sides = 6;
-            dice D8 = new dice();
-            D8.sides = 8;
-            dice D10 = new dice();
-            D8.sides = 10;
-            dice D12 = new dice();
-            D12.sides = 12;
-            dice D20 = new dice();
-            dice D100 = new dice();
-            D100.sides = 100;
+            if (versionDif)
+            {
+                // Update Programm
+                if (MessageBox.Show("You are currently running version " + currentVersion + "\na new Version is available to download. Take you there?", "AverageRollCalc Updater", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("https://github.com/RaphaelFrisano/AverageRollCalc/tree/main/AverageRollCalc/bin/release/AverageRollCalc.exe");
+                }
+            }
+            else
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            }
+            
+        }
 
-            MessageBox.Show("On the D4 you rolled: " + D4.Roll().ToString());
-            MessageBox.Show("On the D6 you rolled: " + D6.Roll().ToString());
-            MessageBox.Show("On the D8 you rolled: " + D8.Roll().ToString());
-            MessageBox.Show("On the D10 you rolled: " + D10.Roll().ToString());
-            MessageBox.Show("On the D12 you rolled: " + D12.Roll().ToString());
-            MessageBox.Show("On the D20 you rolled: " + D20.Roll().ToString());
-            MessageBox.Show("On the D100 you rolled: " + D100.Roll().ToString());
-            */
+        public static bool versionDifferent(string currentVersion, string pathToVersionFile)
+        {
+            WebClient myBotNewVersionClient = new WebClient();
+            Stream stream = myBotNewVersionClient.OpenRead(pathToVersionFile);
+            StreamReader reader = new StreamReader(stream);
+            string onlineVersion = reader.ReadToEnd();
+
+            return onlineVersion == currentVersion;
         }
     }
+    
 }
