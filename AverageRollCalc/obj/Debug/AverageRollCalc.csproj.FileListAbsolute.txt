@@ -1,0 +1,11 @@
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\bin\Debug\AverageRollCalc.exe.config
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\bin\Debug\AverageRollCalc.exe
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\bin\Debug\AverageRollCalc.pdb
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.csproj.AssemblyReference.cache
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.Form1.resources
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.Properties.Resources.resources
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.csproj.GenerateResource.cache
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.csproj.CoreCompileInputs.cache
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.exe
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.pdb
+C:\Users\z003ynsy\source\repos\test\AverageRollCalc\AverageRollCalc\obj\Debug\AverageRollCalc.csproj.SuggestedBindingRedirects.cache

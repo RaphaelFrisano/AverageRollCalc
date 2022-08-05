@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Comments>
+  <Comment name="AddIgnored">
+    <remarks>
+      <para>If item duplicates are <see cref="IniDuplication.Ignored">ignored</see> and this item is a duplicate, has an existing name in this collection, then it is <b>not added</b>.</para>
+    </remarks>
+  </Comment>
+  <Comment name="InsertIgnored">
+    <remarks>
+      <para>If item duplicates are <see cref="IniDuplication.Ignored">ignored</see> and this item is a duplicate, has an existing name in this collection, then it is <b>not inserted</b>.</para>
+    </remarks>
+  </Comment>
+  <Comment name="TryParseValueSupport">
+    <remarks>
+      <para>For supported types see the remarks of <see cref="IsSupportedValueType(Type)"/> method.</para>
+      <para>Mapped value results in <see cref="IniFile.ValueMappings"/> have priority over parsing the value.</para>
+    </remarks>
+    <seealso href="c49dc3a5-866f-4d2d-8f89-db303aceb5fe.htm#parsing" target="_self">IniKey's Value Parsing</seealso>
+  </Comment>
+</Comments>
