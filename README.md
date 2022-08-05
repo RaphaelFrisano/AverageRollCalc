@@ -14,7 +14,7 @@ This tool will allow you to document all your dicerolls for pen and paper games 
 
 Installation is as easy as possible, as long as you have a Windows machine it works!
 
-First, Download the .exe file from [here](https://github.com/RaphaelFrisano/AverageRollCalc/tree/main/AverageRollCalc/bin/Debug) </br>
+First, Download the .exe file from [here](https://github.com/RaphaelFrisano/AverageRollCalc/tree/main/AverageRollCalc/bin/Release) </br>
 Then? Success! You can start it from anywhere on your PC. To learn how to use see below.
 
 ## Usage/Examples
@@ -23,7 +23,7 @@ Start by making creating a character. First click on the "Create new character" 
 
 
 After creating a character... You are already done and ready to go! You can add rolls by goin to the dice's tab which you want to document and then input your rolled value and if there was a modifier, if it was positive or negative and by how much. After clicking the "Add Roll" button your roll will be added to the list right below. </br>
-![createChar](https://user-images.githubusercontent.com/54019563/183031762-067c52f5-49c3-4d05-a41d-8ce98a447482.png)
+![addRolls](https://user-images.githubusercontent.com/54019563/183031762-067c52f5-49c3-4d05-a41d-8ce98a447482.png)
 
 
 ## Authors & Acknowledgements
